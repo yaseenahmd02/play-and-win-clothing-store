@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play & Win - Clothing Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="https://i.postimg.cc/6p6wQxPH/loot.jpg" alt="Store Logo" class="logo">
+            </div>
+            <div class="hero-content">
+                <h1 class="headline">Play & Win – Get Rewards While You Shop!</h1>
+                <button class="cta-button" id="startPlayingBtn">Start Playing</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Play & Win Section -->
+    <section class="play-win-section" id="playWinSection">
+        <div class="container">
+            <h2 class="section-title">Play & Win</h2>
+            <div class="games-container">
+                <div class="game-card" id="spinGame">
+                    <div class="game-icon">🎡</div>
+                    <h3>Spin & Win</h3>
+                    <p>Spin the wheel for amazing rewards!</p>
+                    <button class="game-button spin-button">Play Spin & Win</button>
+                </div>
+                <div class="game-card" id="scratchGame">
+                    <div class="game-icon">🎯</div>
+                    <h3>Scratch & Win</h3>
+                    <p>Scratch to reveal your prize!</p>
+                    <button class="game-button scratch-button">Play Scratch & Win</button>
+                </div>
+            </div>
+
+            <!-- Game Animation Area -->
+            <div class="game-animation-area" id="gameAnimationArea" style="display: none;">
+                <div class="spin-wheel" id="spinWheel">
+                    <div class="wheel-segments">
+                        <div class="segment">10% Off</div>
+                        <div class="segment">20% Off</div>
+                        <div class="segment">Free Avil Milk</div>
+                        <div class="segment">5% Off</div>
+                        <div class="segment">No Win</div>
+                        <div class="segment">15% Off</div>
+                    </div>
+                    <div class="wheel-pointer"></div>
+                </div>
+
+                <div class="scratch-card" id="scratchCard">
+                    <div class="scratch-overlay" id="scratchOverlay">
+                        <p>Scratch Here!</p>
+                    </div>
+                    <div class="scratch-result" id="scratchResult">
+                        <p id="scratchRewardText">Your Prize!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Result Display -->
+            <div class="game-result" id="gameResult" style="display: none;">
+                <div class="result-content">
+                    <h3 id="resultMessage"></h3>
+                    <div class="reward-code" id="rewardCode"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Collection Form -->
+    <section class="lead-form-section" id="leadFormSection" style="display: none;">
+        <div class="container">
+            <h2>Claim Your Reward!</h2>
+            <form class="lead-form" id="leadForm">
+                <div class="form-group">
+                    <label for="customerName">Your Name</label>
+                    <input type="text" id="customerName" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="whatsappNumber">WhatsApp Number</label>
+                    <input type="tel" id="whatsappNumber" name="whatsapp" required>
+                    <span class="error-message" id="whatsappError"></span>
+                </div>
+                <button type="submit" class="submit-button">Claim Reward</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- WhatsApp Integration -->
+    <section class="whatsapp-section" id="whatsappSection" style="display: none;">
+        <div class="container">
+            <h2>Share Your Win!</h2>
+            <p>Click the button below to share your win with us on WhatsApp:</p>
+            <button class="whatsapp-button" id="whatsappButton">
+                <span>💬</span> Share on WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Social & Review Section -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Love our store? Follow & Review us!</h2>
+            <div class="social-buttons">
+                <button class="social-button google-review" onclick="window.open('https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review', '_blank')">
+                    <span>⭐</span> Google Review
+                </button>
+                <button class="social-button instagram" onclick="window.open('https://instagram.com/yourstore', '_blank')">
+                    <span>📱</span> Instagram Page
+                </button>
+                <button class="social-button whatsapp-chat" onclick="window.open('https://wa.me/YOUR_WHATSAPP_NUMBER', '_blank')">
+                    <span>🟢</span> WhatsApp Chat
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by Affylo</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utility.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
